@@ -3,28 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revista Interactiva</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Revista con Paginación</title>
+    <link rel="stylesheet" href="css/style-zine.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-
-    <div class="revista">
-        <button id="prev">←</button>
-        
-        <div class="pagina" id="pagina1">
-            <img src="images/Zine/BE-0/0.png" alt="Página 1">
+    <div id="container">
+        <div id="headerArea">
+            <div id="header"></div>
         </div>
-        <div class="pagina" id="pagina2">
-            <img src="images/Zine/BE-0/1.png" alt="Página 2">
-        </div>
-        <div class="pagina" id="pagina3">
-            <img src="images/Zine/BE-0/2.png" alt="Página 3">
+        <div id="flex">
+            <main>
+                <h1>Zines</h1>
+                <p><strong>¿Qué subo acá?</strong></p>
+                <p>Todos mis zines hechos por mí.</p>
+            </main>
         </div>
 
-        <button id="next">→</button>
+        <!-- PRIMER REVISTA -->
+        <div id="flex">
+            <main>
+                <h1>Basurero Emocional - 0</h1>
+
+                <!-- Contenedor de la revista -->
+                <div class="container mt-4">
+                    <div id="revista1" class="text-center">
+                        <div class="revista revista-pequena">
+                            <div class="pagina active">
+                                <img src="images/Zine/BE-0/0.png" alt="Página 1" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/BE-0/2.png" alt="Página 2" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/BE-0/3.png" alt="Página 3" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/BE-0/4.png" alt="Página 4" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/BE-0/5.png" alt="Página 5" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/BE-0/6.png" alt="Página 6" class="pagina-img">
+                            </div>
+                        </div>
+
+                        <!-- Paginación -->
+                        <ul class="pagination justify-content-center mt-4" id="paginacion1">
+                            <li class="page-item prev"><a class="page-link" href="#">&laquo;</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#">6</a></li>
+                            <li class="page-item next"><a class="page-link" href="#">&raquo;</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- SEGUNDA REVISTA -->
+        <div id="flex">
+            <main>
+                <h1>Peor es Casarse - 0</h1>
+
+                <div class="container mt-4">
+                    <div id="revista2" class="text-center">
+                        <div class="revista revista-redonda">
+                            <div class="pagina active">
+                                <img src="images/Zine/PeC - 0/0.png" alt="Página 1" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/PeC - 0/1.png" alt="Página 2" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/PeC - 0/2.png" alt="Página 3" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/PeC - 0/3.png" alt="Página 4" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/PeC - 0/4.png" alt="Página 5" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/PeC - 0/5.png" alt="Página 6" class="pagina-img">
+                            </div>
+                        </div>
+
+                        <!-- Paginación -->
+                        <ul class="pagination justify-content-center mt-4" id="paginacion2">
+                            <li class="page-item prev"><a class="page-link" href="#">&laquo;</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item next"><a class="page-link" href="#">&raquo;</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- TERCER REVISTA -->
+        <div id="flex">
+            <main>
+                <h1>Ginebra en Taza - 1</h1>
+
+                <!-- Primer contenedor de revistas -->
+                <div class="revistas-row">
+                    <div id="revista3" class="text-center">
+                        <div class="revista revista-normal">
+                            <div class="pagina active">
+                                <img src="images/Zine/GeT - 1/1.png" alt="Página 1" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/GeT - 1/2.png" alt="Página 2" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/GeT - 1/3.png" alt="Página 3" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/GeT - 1/4.png" alt="Página 4" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/GeT - 1/5.png" alt="Página 5" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/GeT - 1/6.png" alt="Página 6" class="pagina-img">
+                            </div>
+                        </div>
+
+                        <!-- Paginación -->
+                        <ul class="pagination justify-content-center mt-4" id="paginacion3">
+                            <li class="page-item prev"><a class="page-link" href="#">&laquo;</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#">6</a></li>
+                            <li class="page-item next"><a class="page-link" href="#">&raquo;</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Segundo contenedor de revistas -->
+                <div class="revistas-row">
+                    <div id="revista4" class="text-center">
+                        <div class="revista revista-normal">
+                            <div class="pagina active">
+                                <img src="images/Zine/GeT - 2/1a.png" alt="Página 1" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/GeT - 2/2.png" alt="Página 2" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/GeT - 2/3.png" alt="Página 3" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/GeT - 2/4.png" alt="Página 4" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/GeT - 2/5.png" alt="Página 5" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/GeT - 2/6.png" alt="Página 6" class="pagina-img">
+                            </div>
+                        </div>
+
+                        <!-- Paginación -->
+                        <ul class="pagination justify-content-center mt-4" id="paginacion4">
+                            <li class="page-item prev"><a class="page-link" href="#">&laquo;</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#">6</a></li>
+                            <li class="page-item next"><a class="page-link" href="#">&raquo;</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tercer contenedor de revistas -->
+                <div class="revistas-row">
+                    <div id="revista5" class="text-center">
+                        <div class="revista revista-normal">
+                            <div class="pagina active">
+                                <img src="images/Zine/GeT - 3/1.png" alt="Página 1" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/GeT - 3/2.png" alt="Página 2" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/GeT - 3/3.png" alt="Página 3" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/GeT - 3/4.png" alt="Página 4" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/GeT - 3/5.png" alt="Página 5" class="pagina-img">
+                            </div>
+                            <div class="pagina">
+                                <img src="images/Zine/GeT - 3/6.png" alt="Página 6" class="pagina-img">
+                            </div>
+                        </div>
+
+                        <!-- Paginación -->
+                        <ul class="pagination justify-content-center mt-4" id="paginacion5">
+                            <li class="page-item prev"><a class="page-link" href="#">&laquo;</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#">6</a></li>
+                            <li class="page-item next"><a class="page-link" href="#">&raquo;</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </div>
     </div>
 
     <script src="js/script.js"></script>
-
 </body>
 </html>
